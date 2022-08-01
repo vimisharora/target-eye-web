@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Quick Messages</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <style>
+        
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading"></h1>
+    <div class="row">
+        <div class="column">
+          <a class="card-link" href="#" onclick="quick1_audio_play()">
+          <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/quick_1.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/quick_1.png" /> -->
+            <audio style="display: none;" id="quick1-audio" src="{{ url_for('static',filename='audio/quick1.mp3')}}"></audio>
+            <h3>Message 1</h3>
+          </div>
+        </a>
+        </div>
+      
+        <div class="column">
+          <a class="card-link" href="#" onclick="quick2_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/quick_2.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/quick_2.png" /> -->
+                <audio style="display: none;" id="quick2-audio" src="{{ url_for('static',filename='audio/quick2.mp3')}}"></audio>
+                <h3>Message 2</h3>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column">
+          <a class="card-link" href="#" onclick="quick3_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/quick3.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/quick3.png" /> -->
+                <audio style="display: none;" id="quick3-audio" src="{{ url_for('static',filename='audio/quick3.mp3')}}"></audio>
+                <h3>Message 3</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a class="card-link" href="#" onclick="quick4_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/quick_4.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/quick_4.png" /> -->
+                <audio style="display: none;" id="quick4-audio" src="{{ url_for('static',filename='audio/quick4.mp3')}}"></audio>
+                <h3>Message 4</h3>
+            </div>
+          </a>
+        </div>
+      
+        <div class="column">
+          <a class="card-link" href="#" onclick="quick5_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/quick_5.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/quick_5.png" /> -->
+                <audio style="display: none;" id="quick5-audio" src="{{ url_for('static',filename='audio/quick5.mp3')}}"></audio>
+                <h3>Message 5</h3>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column">
+            <a class="card-link" href="#" onclick="quick6_audio_play()">
+              <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/quick_6.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/quick_6.png" /> -->
+                  <audio style="display: none;" id="quick6-audio" src="{{ url_for('static',filename='audio/quick6.mp3')}}"></audio>
+                  <h3>Message 6</h3>
+              </div>
+            </a>
+          </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a class="card-link" href="#" onclick="quick7_audio_play()">
+          <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/quick_7.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/quick_7.png" /> -->
+            <audio style="display: none;" id="quick7-audio" src="{{ url_for('static',filename='audio/quick7.mp3')}}"></audio>
+            <h3>Message 7</h3>
+          </div>
+        </a>
+        </div>
+      
+        <div class="column">
+          <a class="card-link" href="#" onclick="quick8_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/quick_8.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/quick_8.png" /> -->
+                <audio style="display: none;" id="quick8-audio" src="{{ url_for('static',filename='audio/quick8.mp3')}}"></audio>
+                <h3>Message 8</h3>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column">
+            <a class="card-link"  href="normal.html">
+              <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/back_arr.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/back_arr.png" /> -->
+                  <h3>Back</h3>
+              </div>
+            </a>
+          </div>
+      </div>
+    </div>
+    <script>
+      function quick1_audio_play() {
+        var audio = document.getElementById("quick1-audio");
+        audio.play();
+      }
+      function quick2_audio_play() {
+        var audio = document.getElementById("quick2-audio");
+        audio.play();
+      }
+      function quick3_audio_play() {
+        var audio = document.getElementById("quick3-audio");
+        audio.play();
+      }
+      function quick4_audio_play() {
+        var audio = document.getElementById("quick4-audio");
+        audio.play();
+      }
+      function quick5_audio_play() {
+        var audio = document.getElementById("quick5-audio");
+        audio.play();
+      }
+      function quick6_audio_play() {
+        var audio = document.getElementById("quick6-audio");
+        audio.play();
+      }
+      function quick7_audio_play() {
+        var audio = document.getElementById("quick7-audio");
+        audio.play();
+      }
+      function quick8_audio_play() {
+        var audio = document.getElementById("quick8-audio");
+        audio.play();
+      }
+    </script>
+</body>
+</html>

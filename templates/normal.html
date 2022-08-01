@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Issues</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <style>
+        .heading{
+            text-align: center;
+            margin-bottom: 150px !important;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Common Issues</h1>
+    <div class="row">
+      <div class="column">
+        <a class="card-link" href="quick_message">
+          <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/quick_message.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/quick_message.png" /> -->
+              <h3>Quick Messages</h3>
+          </div>
+        </a>
+      </div>
+      
+      <div class="column">
+        <a class="card-link" target="blank" href="https://web.whatsapp.com/">
+          <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/message.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/message.png" /> -->
+              <h3>Message/Whatsapp</h3>
+          </div>
+        </a>
+      </div>
+        
+        <div class="column">
+            <a class="card-link"  href="isssues">
+              <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/back_arr.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/back_arr.png" /> -->
+                  <h3>Back</h3>
+              </div>
+            </a>
+          </div>
+      </div>
+    </div>
+    <script>
+      function emergency_audio_play() {
+        var audio = document.getElementById("emergency-audio");
+        audio.play();
+      }
+      function medicine_audio_play() {
+        var audio = document.getElementById("medicine-audio");
+        audio.play();
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Food</title>    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <style>
+        
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Food Menu</h1>
+    <div class="row">
+        <div class="column">
+          <a class="card-link" href="#" onclick="indian_audio_play()">
+          <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/indian.jpg')}}" />
+              <!-- <img class="img-responsive" src="assets/images/indian.jpg" /> -->
+            <audio style="display: none;" id="indian-audio" src="{{ url_for('static',filename='audio/indian.mp3')}}"></audio>
+            <h3>Indian</h3>
+          </div>
+        </a>
+        </div>
+      
+        <div class="column">
+          <a class="card-link" href="#" onclick="chinese_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/chinese.jpg')}}" />
+              <!-- <img class="img-responsive" src="assets/images/chinese.jpg" /> -->
+                <audio style="display: none;" id="chinese-audio" src="{{ url_for('static',filename='audio/chinese.mp3')}}"></audio>
+                <h3>Chinese</h3>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column">
+          <a class="card-link" href="#" onclick="italian_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/italian.jpg')}}" />
+              <!-- <img class="img-responsive" src="assets/images/italian.jpg" /> -->
+                <audio style="display: none;" id="italian-audio" src="{{ url_for('static',filename='audio/italian.mp3')}}"></audio>
+                <h3>Italian</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a class="card-link" href="#" onclick="mexican_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/mexican.jpg')}}" />
+              <!-- <img class="img-responsive" src="assets/images/mexican.jpg" /> -->
+                <audio style="display: none;" id="mexican-audio" src="{{ url_for('static',filename='audio/mexican.mp3')}}"></audio>
+                <h3>Mexican</h3>
+            </div>
+          </a>
+        </div>
+      
+        <div class="column">
+          <a class="card-link" href="#" onclick="thai_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/thai.jpg')}}" />
+              <!-- <img class="img-responsive" src="assets/images/thai.jpg" /> -->
+                <audio style="display: none;" id="thai-audio" src="{{ url_for('static',filename='audio/thai.mp3')}}"></audio>
+                <h3>Thai</h3>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column">
+          <a class="card-link"  href="index">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/back_arr.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/back_arr.png" /> -->
+                <h3>Back</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function thai_audio_play() {
+        var audio = document.getElementById("thai-audio");
+        audio.play();
+      }
+      function indian_audio_play() {
+        var audio = document.getElementById("indian-audio");
+        audio.play();
+      }
+      function chinese_audio_play() {
+        var audio = document.getElementById("chinese-audio");
+        audio.play();
+      }
+      function italian_audio_play() {
+        var audio = document.getElementById("italian-audio");
+        audio.play();
+      }
+      function mexican_audio_play() {
+        var audio = document.getElementById("mexican-audio");
+        audio.play();
+      }
+    </script>
+</body>
+</html>

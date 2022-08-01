@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Issues</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <style>
+        .heading{
+            text-align: center;
+            margin-bottom: 150px !important;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Medical Issues</h1>
+    <div class="row">
+        <div class="column">
+          <a class="card-link" href="#" onclick="emergency_audio_play()">
+          <form action= "/medicine" method="POST">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/sos.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/sos.png" /> -->
+                <audio style="display: none;" id="emergency-audio" src="{{ url_for('static',filename='audio/emergency.mp3')}}"></audio>
+                <!-- <audio style="display: none;" id="emergency-audio" src="emergency.mp3"></audio> -->
+            <h3>SOS Mail</h3>
+          </div>
+        </form>
+          </a>
+        </div>
+      
+        <div class="column">
+          <a class="card-link" href="#" onclick="medicine_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/med.jpg')}}" />
+              <!-- <img class="img-responsive" src="assets/images/med.jpg" /> -->
+                <audio style="display: none;" id="medicine-audio" src="{{ url_for('static',filename='audio/medicine.mp3')}}"></audio>
+                <!-- <audio style="display: none;" id="medicine-audio" src="medicine.mp3"></audio> -->
+                <h3>Take Medicine</h3>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column">
+          <a class="card-link" href="isssues">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/back_arr.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/back_arr.png" /> -->
+                <h3>Back</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+    <script>
+      function emergency_audio_play() {
+        var audio = document.getElementById("emergency-audio");
+        audio.play();
+      }
+      function medicine_audio_play() {
+        var audio = document.getElementById("medicine-audio");
+        audio.play();
+      }
+    </script>
+</body>
+</html>

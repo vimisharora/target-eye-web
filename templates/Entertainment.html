@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Entertainment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <style>
+        .heading{
+            text-align: center;
+            margin-bottom: 150px !important;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Music/Movies</h1>
+    <div class="row">
+        <div class="column">
+          <a class="card-link" target="blank" href="https://music.youtube.com/watch?v=RmxTCXr9aGo&list=RDAMVMRmxTCXr9aGo">
+          <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/music.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/music.png" /> -->
+            <audio style="display: none;" id="regular-audio" src="{{ url_for('static',filename='audio/regular.mp3')}}"></audio>
+            <h3>Music</h3>
+          </div>
+          </a>
+        </div>
+      
+        <div class="column">
+          <a class="card-link" target="blank" href="https://www.youtube.com/results?search_query=movies+bollywood">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/movies.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/movies.png" /> -->
+                <!-- <audio style="display: none;" id="mineral-audio" src="mineral.mp3"></audio> -->
+                <h3>Movies</h3>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column">
+          <a class="card-link"  href="index.html">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/back_arr.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/back_arr.png" /> -->
+                <h3>Back</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- <script>
+      function mineral_audio_play() {
+        var audio = document.getElementById("mineral-audio");
+        audio.play();
+      }
+      function regular_audio_play() {
+        var audio = document.getElementById("regular-audio");
+        audio.play();
+      }
+    </script> -->
+</body>
+</html>

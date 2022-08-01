@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Eye</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <style>
+        
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">WELCOME!!</h1>
+    <div class="row">
+        <div class="column">
+          <a class="card-link" target="blank" href="keyboard">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/keyboard.png')}}" />
+              <h3>Keyboard</h3>
+            </div>
+          </a>
+        </div>
+      
+        <div class="column">
+          <a class="card-link" href="food">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/food1.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/food1.png" /> -->
+                <h3>Food</h3>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column">
+          <a class="card-link" href="#" onclick="toilet_audio_play()">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/toilet.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/toilet.png" /> -->
+                <audio style="display: none;" id="toilet-audio" src="{{ url_for('static',filename='audio/toilet.mp3')}}"></audio>
+                <h3>Toilet</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a class="card-link" href="water">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/water1.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/water1.png" /> -->
+                <h3>Water</h3>
+            </div>
+          </a>
+        </div>
+      
+        <div class="column">
+          <a class="card-link" href="entertainment">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/entertainment.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/entertainment.png" /> -->
+                <h3>Entertainment</h3>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column">
+          <a class="card-link" href="issues">
+            <div class="card">
+              <img class="img-responsive" src="{{ url_for('static',filename='images/sol.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/sol.png" /> -->
+                <h3>Issues</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toilet_audio_play() {
+        var audio = document.getElementById("toilet-audio");
+        audio.play();
+      }
+    </script>
+</body>
+</html>
