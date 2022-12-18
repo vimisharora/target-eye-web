@@ -56,21 +56,26 @@
         </div>
       
         <div class="column">
-          <a class="card-link" href="entertainment">
+          <a class="card-link" href="#" onclick="emergency_audio_play()">
+          <form action= "/medicine" method="POST">
             <div class="card">
-              <img class="img-responsive" src="{{ url_for('static',filename='images/entertainment.png')}}" />
-              <!-- <img class="img-responsive" src="assets/images/entertainment.png" /> -->
-                <h3>Entertainment</h3>
-            </div>
+              <img class="img-responsive" src="{{ url_for('static',filename='images/sos.png')}}" />
+              <!-- <img class="img-responsive" src="assets/images/sos.png" /> -->
+                <audio style="display: none;" id="emergency-audio" src="{{ url_for('static',filename='audio/emergency.mp3')}}"></audio>
+                <!-- <audio style="display: none;" id="emergency-audio" src="emergency.mp3"></audio> -->
+            <h3>SOS Mail</h3>
+          </div>
+        </form>
           </a>
         </div>
+
         
         <div class="column">
-          <a class="card-link" href="issues">
+          <a class="card-link" href="messages">
             <div class="card">
               <img class="img-responsive" src="{{ url_for('static',filename='images/sol.png')}}" />
               <!-- <img class="img-responsive" src="assets/images/sol.png" /> -->
-                <h3>Issues</h3>
+                <h3>Messages</h3>
             </div>
           </a>
         </div>
@@ -80,6 +85,10 @@
     <script>
       function toilet_audio_play() {
         var audio = document.getElementById("toilet-audio");
+        audio.play();
+      }
+      function emergency_audio_play() {
+        var audio = document.getElementById("emergency-audio");
         audio.play();
       }
     </script>

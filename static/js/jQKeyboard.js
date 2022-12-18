@@ -50,7 +50,7 @@
      * initialize keyboard
      * @param {type} settings
      */
-    $.fn.initKeypad = function(settings){
+    $.fn.initKeypad = function(){
         //$.extend(activeInput, settings);
 
         $(this).click(function(e){
